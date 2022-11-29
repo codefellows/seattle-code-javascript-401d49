@@ -1,0 +1,16 @@
+{
+  "name": "warmup",
+  "version": "1.0.0",
+  "description": "## `map()` method",
+  "main": "map.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "test-watch": "jest --watchAll --verbose --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.3.1"
+  }
+}
