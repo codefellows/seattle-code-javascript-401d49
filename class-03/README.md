@@ -96,6 +96,10 @@ app.use('/custom', customRoutes);
 
 ```
 
+### Postgres Install Docs Have Been Updated
+
+Refer to [setup](https://codefellows.github.io/setup-guide/code-401-javascript/4-postgres.html) if necessary
+
 ### Sequelize
 
 In order to communicate with our SQL database we will utilize the `sequelize` library and the `sequelize-cli` to communicate with our persistent data.  Use the following commands to perform database intialization and CRUD behaviors.
