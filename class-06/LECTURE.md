@@ -1,5 +1,9 @@
 # Basic Authentication
 
+## Whiteboard
+
+[Today's Freehand](https://projects.invisionapp.com/freehand/document/TWCxm4kPB)
+
 ## Encoding vs Encryption
 
 both are transformations
