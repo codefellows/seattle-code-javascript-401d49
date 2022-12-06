@@ -47,6 +47,29 @@ class LinkedList{
     node.next = this.head;
     this.head = node;
   }
+
+  includes(value){
+    let result = false
+
+    let current = this.head;
+    while(current){
+      if(current.value === value) result = true;
+      current = current.next
+    }
+
+    return result;
+  }
+
+  toString(){
+    let str = '';
+    let current = this.head;
+    while (current){
+      str += `{ ${current.value} } -> `;
+      current = current.next
+    }
+    str += 'NULL';
+    return str;
+  }
 }
 
 let list = new LinkedList();
