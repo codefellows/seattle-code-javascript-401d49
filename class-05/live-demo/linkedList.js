@@ -70,6 +70,65 @@ class LinkedList{
     str += 'NULL';
     return str;
   }
+
+  append(value){
+    const node = new Node(value);
+
+    if(!this.head){
+      this.head = node;
+      return;
+    }
+    let current = this.head;
+
+    while(current.next){
+      current = current.next
+    }
+    current.next = node
+  }
+
+  insertBefore(value, newValue){
+    if(!this.head){
+      throw new Error('Linked List is Empty');
+    }
+
+    if (this.head.value === value){
+      this.insert(newValue);
+      return
+    }
+
+    let current = this.head;
+
+    while(current){
+      // console.log({current, currentNext: current.next})
+      if (current.next && current.next.value === value){
+        let newNode = new Node(newValue);
+        newNode.next = current.next;
+        current.next = newNode
+        current =  current.next.next
+      } else{
+        current = current.next;
+      }
+    }
+  }
+
+  insertAfter(value, newValue){
+    if(!this.head){
+      throw new Error('Linked List is Empty');
+    }
+
+    let current = this.head;
+
+    while(current){
+      // console.log({current, currentNext: current.next})
+      if (current.value === value){
+        let newNode = new Node(newValue);
+        newNode.next = current.next;
+        current.next = newNode
+      }
+
+      current = current.next;
+    }
+  }
 }
 
 let list = new LinkedList();
