@@ -1,0 +1,37 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "db:config": "sequelize init:config",
+    "db:create": "sequelize db:create",
+    "watch": "nodemon index.js",
+    "test-watch": "NODE_ENV=test jest --verbose --coverage --watchAll",
+    "test": "NODE_ENV=test jest --verbose --coverage"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "base-64": "^1.0.0",
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "eslint": "^8.29.0",
+    "express": "^4.17.1",
+    "jest": "^26.6.3",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.6.0",
+    "sequelize": "^6.26.0",
+    "sequelize-cli": "^6.5.2",
+    "sqlite": "^4.1.2",
+    "sqlite3": "^5.1.2",
+    "supertest": "^6.1.3"
+  }
+}
