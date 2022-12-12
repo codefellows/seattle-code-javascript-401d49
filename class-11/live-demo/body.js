@@ -8,6 +8,7 @@ const eyesHandler = require('./eyes/eyesHandler');
 const handHandler = require('./hand/handHandler');
 const pupilsHandler = require('./pupils/pupilsHandler');
 
+// listen to all events
 eventPool.on('SUNLIGHT', eyesHandler);
 eventPool.on('BRIGHTNESS', brainHandler);
 eventPool.on('DILATION', pupilsHandler);
