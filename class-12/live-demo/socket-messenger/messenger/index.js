@@ -10,7 +10,7 @@ socket.on('RECEIVED', handleReceived);
 
 function handleReceived(payload) {
   setTimeout(() => {
-    console.log(`Receipt confirmed to: ${payload.text.split(' ').pop()}`);
+    console.log(`Receipt confirmed for: ${payload.text.split(' ').pop()}`);
     
   }, 1000);
 }
