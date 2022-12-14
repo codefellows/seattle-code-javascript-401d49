@@ -1,24 +1,27 @@
 'use strict';
 
 require('dotenv').config();
-const { Socket } = require('engine.io');
 const { Server } = require('socket.io');
 const PORT = process.env.PORT || 3002;
 
 // instance of a listening event server at http://localhost:3001
-const server = new Server(3001);
+const server = new Server();
 
 // create a namespace
 const brightness = server.of('/brightness');
 
 brightness.on('connection', (socket) => {
-  console.log('Socket connected to brightness namespace!', socket.id);
+  socket.onAny((event, payload) => console.log({event, payload}));
+  console.log('Socket connected to brightness namespace!', socket.id, socket.rooms);
 
   // how ot join a room
-  // socket.on('JOIN', (room) => {
-  //   console.log(`You've joined the ${room} room`);
-  //   socket.join(room);
-  // });
+  socket.on('JOIN', (room) => {
+    console.log('These are the rooms', socket.rooms);
+    console.log('payload-----', room)
+    console.log(`You've joined the ${room} room`);
+    socket.join(room);
+    console.log('These are the rooms', socket.rooms);
+  });
 
   socket.on('SUNLIGHT', (payload) => {
     console.log('SUNLIGHT', payload);
@@ -45,3 +48,5 @@ server.on('connection', (socket) => {
     socket.broadcast.emit('RECEIVED', payload);
   });
 });
+
+server.listen(PORT)
