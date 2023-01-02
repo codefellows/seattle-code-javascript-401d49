@@ -1,0 +1,35 @@
+// to install sass:  'npm i sass'
+
+// create variables with sass:
+$bg-color: lightgray;
+$text-color: purple;
+
+@mixin theme() {
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+article {
+  @include theme;
+
+  // background-color: $bg-color;
+  border: 1px solid black;
+  width: 50%;
+  margin: auto;
+  margin-top: 10vw;
+
+  h4 {
+    text-align: center;
+    color: green;
+  }
+
+  p {
+    // color: $text-color;
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+    margin-bottom: 5vw;
+  }
+}
+
+

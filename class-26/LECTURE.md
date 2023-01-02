@@ -36,4 +36,62 @@
   <Header greeting={this.state.greeting}/>
   ```
 
+## React Testing
 
+### Behavior Driven Development
+
+- React Testing Library
+  - sits on top of jest
+  - significant React specific functionality
+
+- How will my component behave as a user interacts with the app / component?
+- What do we expect to test for?  behavior?  functionality (in our reducers / pure functions)  both... it depends.  
+
+
+## React and eslint
+
+- DO NOT bring in the class config `.eslintrc.json` file.  That particular file is for the backend.  
+
+- We will intentionally use Create React App and VSCode's built in linter functionality.  it isn't perfect, but gets about 95%.  
+
+## Code Challenge
+
+some translations:
+- `int j <-- i - 1` => the variable j will be an integer and assigned the value of `i - 1`
+- `int temp <-- arr[i]` => the variable temp will be an integer and assigned the value of `arr[i]`
+
+## Proposed Lab File Structure
+
+```text
+├── .github
+│   └── workflows
+│       └── build_test_react.yml
+├── public
+├── src
+│   ├── __tests__
+│   │   │   └── app.test.js (integration test)
+│   ├── Components
+│   │   ├── Footer
+│   │   │   ├── Footer.jsx
+│   │   │   ├── Footer.scss
+│   │   │   └── footer.test.js (unit test)
+│   │   ├── Form
+│   │   │   ├── Form.jsx
+│   │   │   ├── Form.scss
+│   │   │   └── form.test.js 
+│   │   ├── Header
+│   │   │   ├── Header.jsx
+│   │   │   ├── Header.scss
+│   │   │   └── header.test.js 
+│   │   ├── Results
+│   │   │   ├── Results.jsx
+│   │   │   ├── Results.scss
+│   │   │   └── results.test.js 
+│   ├── App.js
+│   ├── App.scss
+│   ├── index.js
+├── .gitignore
+├── package-lock.json
+├── package.json
+└── README.md
+```
