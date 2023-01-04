@@ -9,8 +9,8 @@ describe("Sorters", () => {
     expect(movies.map((m) => m.title)).toEqual([
       "The Intouchables",
       "Valkyrie",
-      "Stardust",
       "Ratatouille",
+      "Stardust",
       "City of God",
       "Memento",
       "The Shawshank Redemption",
