@@ -60,29 +60,29 @@ In this proposal:
 ```text
 ├── .github
 │   └── workflows
-│       └── build_test_react.yml
+│       └── node.yml
 ├── public
 ├── src
 │   ├── __tests__
-│   │   │   └── app.test.js (integration test)
+│   │   │   └── App.test.jsx (integration test)
 │   ├── Components
 │   │   ├── Footer
 │   │   │   ├── Footer.jsx
 │   │   │   ├── Footer.scss
-│   │   │   └── footer.test.js (unit test)
+│   │   │   └── Footer.test.jsx (unit test)
 │   │   ├── Form
 │   │   │   ├── Form.jsx
 │   │   │   ├── Form.scss
-│   │   │   └── form.test.js 
+│   │   │   └── Form.test.jsx 
 │   │   ├── Header
 │   │   │   ├── Header.jsx
 │   │   │   ├── Header.scss
-│   │   │   └── header.test.js 
+│   │   │   └── Header.test.jsx
 │   │   ├── Results
 │   │   │   ├── Results.jsx
 │   │   │   ├── Results.scss
-│   │   │   └── results.test.js 
-│   ├── App.js
+│   │   │   └── Results.test.jsx 
+│   ├── App.jsx
 │   ├── App.scss
 │   ├── index.js
 ├── .gitignore

@@ -1,4 +1,5 @@
 # do not recommend the use of this if not deploying to gh-pages
+# for github pages ONLY IF YOU USE GITHUB PAGES
 
 name: Deploy React App
 on:
