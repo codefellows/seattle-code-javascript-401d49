@@ -73,7 +73,7 @@ POST:  `/signup`
 
 - send user object in request body
 
-POST:  `/sigin` 
+POST:  `/signin` 
 
 - send login user object:  basic auth header, username and password 
 
